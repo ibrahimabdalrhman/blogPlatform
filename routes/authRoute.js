@@ -2,10 +2,11 @@ const express = require("express");
 const router = express.Router();
 
 const authController = require("../controllers/auth");
+const { loginValidator, signupValidator } = require('../utils/validation/userValidator');
 
-router.post("/signup", authController.signup);
+router.post("/signup",signupValidator, authController.signup);
 
-router.post("/login", authController.login);
+router.post("/login", loginValidator,authController.login);
 
 // router.get("/forget-password", postController.getPostById);
 

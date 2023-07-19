@@ -13,7 +13,7 @@ const postsSchema = new mongoose.Schema(
     // user: {
     //   type:mongooose.Schema.ObjectId
     // },
-    image: String,
+    images: [String],
     likes: [
       {
         type: mongoose.Schema.ObjectId,
